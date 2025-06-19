@@ -13,7 +13,7 @@ export default function Home() {
   const typingRef = useRef<number | null>(null);
 
   document.addEventListener("DOMContentLoaded", () => {
-    const mainElement = document.querySelector("#page-wrapper");
+    const mainElement = document.querySelector("main") as HTMLDivElement;
     if (!mainElement) {
       return;
     }
