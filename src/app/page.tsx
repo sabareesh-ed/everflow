@@ -53,21 +53,26 @@ export default function Home() {
     });
 
     // Line drawing animation for SVG path
-    const path = svgRef.current.querySelector('path');
-    const length = path.getTotalLength();
+    if (svgRef.current) {
+      const path = (svgRef.current as SVGSVGElement).querySelector('path');
+      if (!path) {
+        return;
+      }
+      const length = path.getTotalLength();
 
-    // Set initial stroke dash properties
-    gsap.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: length,
-    });
+      // Set initial stroke dash properties
+      gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+      });
 
-    // Animate line drawing
-    gsap.to(path, {
-      strokeDashoffset: 0,
-      duration: 3,
-      ease: "power2.out",
-    });
+      // Animate line drawing
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 3,
+        ease: "power2.out",
+      });
+    }
 
 
   }, []);
