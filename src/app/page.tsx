@@ -21,7 +21,7 @@ export default function Home() {
   });
 
   const navRef = useRef(null);
-  const sectionRefs = useRef<Array<any>>([]);
+  const sectionRefs = useRef<HTMLDivElement[]>([]);
   const svgRef = useRef(null);
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function Home() {
     "Lorem ipsum dolor sit amet, consectetur sed do eiusmod tempor",
   ];
 
-  let currentIndex = useRef<number>(0);
+  const currentIndex = useRef<number>(0);
   const typeText = (text: string) => {
     let currentText = "";
     let i = 0;
