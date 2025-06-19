@@ -10,7 +10,8 @@ export default function Home() {
   const [tabIconPosition, setTabIconPosition] = useState<number>(4);
   const [isTabIconVisible, setIsTabIconVisible] = useState<boolean>(false);
   const [isCTAVisible, setIsCTAVisible] = useState<boolean>(false);
-  const typingRef = useRef<number | null>(null);
+  const typingRef = useRef<NodeJS.Timeout | null>(null); // Explicitly type typingRef to hold NodeJS.Timeout or null
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const mainElement = document.querySelector("main") as HTMLDivElement;
