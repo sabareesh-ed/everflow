@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #181B1F;
     --foreground: #ededed;
   }
 }
@@ -22,5 +22,50 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ibm);
+}
+
+h1 span {
+  background: -webkit-linear-gradient(90deg, #191B1F, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: #d8d9da;
+}
+
+/* Container for the marquee */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 5rem, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 5rem, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Each item inside the marquee */
+.marquee-items {
+  display: flex;
+  flex: 0 0 auto;
+  animation: marquee 90s linear infinite;
+}
+
+.marquee-items img {
+  opacity: 0.4;
+}
+
+.marquee-item {
+  padding-left: 3rem;
+  width: 170px; 
+  height: 60px;
+  margin-right: 12px; 
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
