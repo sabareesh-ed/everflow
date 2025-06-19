@@ -14,6 +14,9 @@ export default function Home() {
 
   document.addEventListener("DOMContentLoaded", () => {
     const mainElement = document.querySelector("#page-wrapper");
+    if (!mainElement) {
+      return;
+    }
     mainElement.style.opacity = "0";
     window.onload = () => {
       mainElement.style.opacity = "1";
