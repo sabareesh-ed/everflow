@@ -12,17 +12,18 @@ export default function Home() {
   const [isCTAVisible, setIsCTAVisible] = useState<boolean>(false);
   const typingRef = useRef<NodeJS.Timeout | null>(null); // Explicitly type typingRef to hold NodeJS.Timeout or null
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const mainElement = document.querySelector("main") as HTMLDivElement;
-    if (!mainElement) {
-      return;
-    }
-    mainElement.style.opacity = "0";
-    window.onload = () => {
-      mainElement.style.opacity = "1";
-    };
-  });
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainElement = document.querySelector("main") as HTMLDivElement;
+      if (!mainElement) {
+        return;
+      }
+      mainElement.style.opacity = "0";
+      window.onload = () => {
+        mainElement.style.opacity = "1";
+      };
+    });
+  }, []);
 
   const navRef = useRef(null);
   const sectionRefs = useRef<HTMLDivElement[]>([]);
