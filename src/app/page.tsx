@@ -12,6 +12,20 @@ export default function Home() {
   const [isCTAVisible, setIsCTAVisible] = useState<boolean>(false);
   const [isTyping, setTyping] = useState<boolean>(false);
   const typingRef = useRef<NodeJS.Timeout | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+   useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener('resize', checkScreenSize);
+
+    checkScreenSize();
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   useEffect(() => {
     document.addEventListener("DOMContentLoaded", () => {
@@ -542,7 +556,7 @@ export default function Home() {
               className="absolute top-[15px] left-[5ch] transition duration-200"
               style={{
                 left: `${tabIconPosition}ch`,
-                opacity: isTabIconVisible ? 1 : 0,
+                opacity: isMobile ? 0 : isTabIconVisible ? 1 : 0,
               }} // Adjust left position based on current text length
               onClick={handleTabIconClick}
             >
