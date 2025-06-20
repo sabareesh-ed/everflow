@@ -420,7 +420,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="max-w-[72rem] mx-auto flex flex-col px-2 sm:px-8 overflow-hidden">
+      <main className="max-w-[72rem] mx-auto flex flex-col px-2 sm:px-8 overflow-hidden"> 
         <div className="pt-14 pb-18 sm:pt-18 sm:pb-22 relative">
         <div className="bg-gradient-to-r from-[transparent] via-[#transparent] to-[#363636] h-[1px] width-[100vw] transform translate-x-[30vw] absolute bottom-0 left-0 right-0"></div>
         <div className="bg-gradient-to-r to-[transparent] via-[#363636] from-[#363636] h-[1px] width-[100vw] transform translate-x-[-30vw] absolute bottom-0 left-0 right-0"></div>
