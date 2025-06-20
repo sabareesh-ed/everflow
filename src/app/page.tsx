@@ -258,11 +258,11 @@ export default function Home() {
 
       <nav
         ref={navRef}
-        className="flex relative justify-between items-center py-5 max-w-[72rem] mx-auto"
+        className="flex relative justify-between items-center md:py-5 py-2 max-w-[72rem] mx-auto px-4 sm:px-8"
       >
         <div className="bg-gradient-to-r from-[transparent] via-[#363636] to-[#363636] h-[1px] width-[100vw] transform translate-x-[30vw] absolute bottom-0 left-0 right-0"></div>
         <div className="bg-gradient-to-r to-[transparent] via-[#363636] from-[#363636] h-[1px] width-[100vw] transform translate-x-[-30vw] absolute bottom-0 left-0 right-0"></div>
-        <div className="flex items-center">
+        <div className="items-center flex">
           <a href="#">
             <svg
               width="107"
@@ -281,7 +281,7 @@ export default function Home() {
               />
             </svg>
           </a>
-          <ul className="ml-8 flex space-x-2 text-sm font-medium">
+          <ul className="ml-8 space-x-2 text-sm font-medium  hidden md:flex">
             <li>
               <a
                 className="flex py-1 gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-4xl transition duration-300"
@@ -400,7 +400,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="flex items-center space-x-4 text-sm">
+        <div className="flex items-center space-x-2 md:space-x-4 text-sm">
           <button className="flex py-1 gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-4xl transition duration-300 cursor-pointer">
             Login
           </button>
@@ -410,7 +410,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="max-w-[72rem] mx-auto flex flex-col">
+      <main className="max-w-[72rem] mx-auto flex flex-col px-2 sm:px-8">
         <div className="pt-18 pb-22 relative">
         <div className="bg-gradient-to-r from-[transparent] via-[#transparent] to-[#363636] h-[1px] width-[100vw] transform translate-x-[30vw] absolute bottom-0 left-0 right-0"></div>
         <div className="bg-gradient-to-r to-[transparent] via-[#363636] from-[#363636] h-[1px] width-[100vw] transform translate-x-[-30vw] absolute bottom-0 left-0 right-0"></div>
@@ -520,7 +520,7 @@ export default function Home() {
           ref={(el) => (sectionRefs.current[0] = el)}
           className="text-center px-4 sm:px-8 md:px-12 lg:px-16"
         >
-          <h1 className="text-2xl sm:text-[32px] md:text-[40px] lg:text-6xl max-w-3xl mx-auto font-[family-name:var(--font-sf)] leading-tight font-medium mb-4">
+          <h1 className="text-[44px] sm:text-[52px] md:text-[60px] max-w-3xl mx-auto font-[family-name:var(--font-sf)] leading-tight font-medium mb-4">
             <span className="inline-block">Lorem ipsum<span className="relative"> dolor sit
               <svg ref={svgRef} className="absolute left-0 right-0 bottom-0 translate-y-[100%]" width="246" height="19" viewBox="0 0 246 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.6" d="M1.8746 7.64974C20.9567 5.43159 136.188 0.700663 183.705 1.44049C197.365 1.65318 211.027 1.88974 224.691 2.22078C229.044 2.32625 237.023 1.74519 242.574 3.3093C244.786 3.93251 244.438 4.90261 242.461 5.34581C234.093 7.22227 224.399 6.73916 215.726 7.35093C196.726 8.691 177.925 10.9769 158.886 12.1051C150.392 12.6084 142.061 13.7289 133.589 14.2664C122.926 14.9429 131.334 14.8281 137.26 14.7078C159.88 14.2487 181.627 14.7029 204.205 17.1549" stroke="url(#paint0_linear_13001_12505)" stroke-width="2" stroke-linecap="round"/>
@@ -610,7 +610,7 @@ export default function Home() {
           ref={(el) => (sectionRefs.current[2] = el)}
           className="mt-12 flex items-center"
         >
-          <div className="flex gap-7 mx-auto">
+          <div className="flex flex-col sm:flex-row gap-7 mx-auto">
             <div className="flex items-center space-x-4">
               <svg
                 width="33"
