@@ -392,11 +392,15 @@ export default function Home() {
         </div>
 
         <div className="flex items-center space-x-2 md:space-x-4 text-sm">
-          <button className="flex py-1 gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-4xl transition duration-300 cursor-pointer">
+          <button className="flex py-2 gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-lg transition duration-300 cursor-pointer">
             Login
           </button>
-          <button className="flex py-1 gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-4xl transition duration-300 cursor-pointer">
+          <button className="flex py-2 border border-[#4A6DD9] gap-2 px-3 items-center hover:bg-[rgba(133,140,148,0.12)] rounded-lg transition duration-300 cursor-pointer">
             Try for free
+            <svg width="16" height="17" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.25 5.15145V14.179C16.25 14.3631 16.1768 14.5398 16.0466 14.67C15.9164 14.8002 15.7397 14.8734 15.5556 14.8734C15.3714 14.8734 15.1948 14.8002 15.0645 14.67C14.9343 14.5398 14.8612 14.3631 14.8612 14.179V6.82762L4.93611 16.7535C4.80581 16.8838 4.62908 16.957 4.44481 16.957C4.26053 16.957 4.08381 16.8838 3.9535 16.7535C3.8232 16.6232 3.75 16.4465 3.75 16.2622C3.75 16.0779 3.8232 15.9012 3.9535 15.7709L13.8794 5.84588H6.52808C6.34391 5.84588 6.16728 5.77271 6.03705 5.64249C5.90682 5.51226 5.83365 5.33563 5.83365 5.15145C5.83365 4.96728 5.90682 4.79065 6.03705 4.66042C6.16728 4.53019 6.34391 4.45703 6.52808 4.45703H15.5556C15.7397 4.45703 15.9164 4.53019 16.0466 4.66042C16.1768 4.79065 16.25 4.96728 16.25 5.15145Z" fill="#4A6DD9"/>
+            </svg>
+
           </button>
         </div>
       </nav>
@@ -748,7 +752,7 @@ export default function Home() {
                 loading="eager"
               />
 
-              <a href="#" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
+              <a href="/casestudy" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
                 CASE STUDY
               </a>
             </div>
@@ -795,7 +799,7 @@ export default function Home() {
                 height={50}
                 loading="eager"
               />
-              <a href="#" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
+              <a href="/casestudy" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
                 CASE STUDY
               </a>
             </div>
@@ -933,7 +937,7 @@ export default function Home() {
                 loading="eager"
               />
 
-              <a href="#" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
+              <a href="/casestudy" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
                 CASE STUDY
               </a>
             </div>
@@ -980,7 +984,7 @@ export default function Home() {
                 height={50}
                 loading="eager"
               />
-              <a href="#" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
+              <a href="/casestudy" className="absolute text-[10px] bottom-0 mx-auto translate-y-[80%] rounded-[5px] text-white px-2 py-1 bg-[#2B3036]">
                 CASE STUDY
               </a>
             </div>
