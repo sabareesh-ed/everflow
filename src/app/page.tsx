@@ -69,6 +69,7 @@ export default function Home() {
 
       gsap.to(path, {
         strokeDashoffset: 0,
+        delay: 1,
         duration: 3,
         ease: "power2.out",
       });
