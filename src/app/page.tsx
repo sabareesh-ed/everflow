@@ -199,7 +199,7 @@ export default function Home() {
       id="page-wrapper"
       className="font-[family-name:var(--font-ibm)] w-screen overflow-hidden "
     >
-      <svg  className="w-full absolute -z-10 object-cover backdrop-blur-lg transform -translate-y-1/2" width="100%" height="100%" viewBox="0 0 2576 641" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg  className="w-full h-screen absolute -z-10 object-cover backdrop-blur-lg transform -translate-y-1/2" width="100%" height="100%" viewBox="0 0 2576 641" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.6">
       <g filter="url(#filter0_f_15001_294)">
       <ellipse cx="640.643" cy="132.027" rx="640.643" ry="132.027" transform="matrix(0.999886 0.0151245 0.996324 -0.0856594 376.393 313.618)" fill="#00F0FF"/>
