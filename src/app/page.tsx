@@ -10,7 +10,8 @@ export default function Home() {
   const [tabIconPosition, setTabIconPosition] = useState<number>(4);
   const [isTabIconVisible, setIsTabIconVisible] = useState<boolean>(false);
   const [isCTAVisible, setIsCTAVisible] = useState<boolean>(false);
-  const typingRef = useRef<NodeJS.Timeout | null>(null); // Explicitly type typingRef to hold NodeJS.Timeout or null
+  const [isTyping, setTyping] = useState<boolean>(false);
+  const typingRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     document.addEventListener("DOMContentLoaded", () => {
@@ -54,7 +55,6 @@ export default function Home() {
       });
     });
 
-    // Line drawing animation for SVG path
     if (svgRef.current) {
       const path = (svgRef.current as SVGSVGElement).querySelector('path');
       if (!path) {
@@ -62,13 +62,11 @@ export default function Home() {
       }
       const length = path.getTotalLength();
 
-      // Set initial stroke dash properties
       gsap.set(path, {
         strokeDasharray: length,
         strokeDashoffset: length,
       });
 
-      // Animate line drawing
       gsap.to(path, {
         strokeDashoffset: 0,
         duration: 3,
@@ -95,78 +93,72 @@ export default function Home() {
       if (i < text.length) {
         currentText += text[i];
         setPlaceholder(currentText);
-        setTabIconPosition(3.5 + currentText.length / 1.32); // Update tab icon position based on current text length
+        setTabIconPosition(3.5 + currentText.length / 1.32);
         i++;
       } else {
         clearInterval(typingRef.current as number);
-        setTimeout(() => deleteText(text), 3500); // Wait 2 seconds before starting to delete
+        setTimeout(() => deleteText(text), 3500);
       }
-    }, 80); // Type each letter every 50ms
+    }, 80);
   };
 
-  // Function to delete text with a faster speed
   const deleteText = (text: string) => {
     let currentText = text;
 
     typingRef.current = setInterval(() => {
       currentText = currentText.slice(0, -1);
       setPlaceholder(currentText);
-      setTabIconPosition(3.5 + currentText.length / 1.32); // Update tab icon position while deleting
+      setTabIconPosition(3.5 + currentText.length / 1.32);
 
       if (currentText === "") {
         clearInterval(typingRef.current as number);
-        currentIndex.current = (currentIndex.current + 1) % texts.length; // Move to next text
+        currentIndex.current = (currentIndex.current + 1) % texts.length;
         if (!focus) {
-          typeText(texts[currentIndex.current]); // Start typing the next text
+          typeText(texts[currentIndex.current]);
         }
       }
-    }, 15); // Delete each letter every 25ms
+    }, 15);
   };
 
-  // Start typing on page load and continue looping
   useEffect(() => {
     typeText(texts[currentIndex.current]);
 
     return () => {
       if (typingRef.current) {
-        clearInterval(typingRef.current); // Cleanup the interval on unmount
+        clearInterval(typingRef.current);
       }
     };
   }, []);
 
-  // Stop animation when the user focuses on the textarea
   const handleFocus = () => {
     setFocus(true);
   };
 
-  // Resume the animation when the user unfocuses the textarea
   const handleBlur = () => {
     setFocus(false);
     if (!typingRef.current) {
-      typeText(texts[currentIndex.current]); // Restart typing when the textarea loses focus
+      typeText(texts[currentIndex.current]);
     }
   };
 
-  // Stop animation when the user starts typing in the textarea
   const handleInput = () => {
-    clearInterval(typingRef.current as number); // Stop animation when typing starts
+    clearInterval(typingRef.current as number); 
   };
 
-  // Handle the tab icon click or tab key press to set the textarea value to the current placeholder
   const handleTabIconClick = () => {
+    setTyping(!isTyping);
     setIsTabIconVisible(false);
     setTimeout(() => {
-      document.getElementById("prompt")?.focus(); // Focus the textarea
+      document.getElementById("prompt")?.focus();
     }, 100);
     setTimeout(() => {
-      document.getElementById("prompt")!.value = placeholder; // Set value to placeholder text
-    }, 10); // Small delay to ensure the focus change happens first
+      document.getElementById("prompt")!.value = placeholder;
+    }, 10);
   };
 
-  // Handle the Tab key press to set the textarea value
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Tab") {
-      handleTabIconClick(); // Trigger the same behavior as clicking the tab icon
+      handleTabIconClick();
     }
   };
 
@@ -178,7 +170,6 @@ export default function Home() {
     } else {
       setIsCTAVisible(false);
     }
-    // Show the tab icon only when placeholder length is greater than 5 and textarea is not focused
     if (document.getElementById("prompt").value.length > 0) {
       setIsTabIconVisible(false);
     } else if (placeholder.length < 12) {
@@ -186,7 +177,7 @@ export default function Home() {
     } else {
       setIsTabIconVisible(true);
     }
-  }, [placeholder]);
+  }, [placeholder, isTyping]);
 
   return (
     <div
@@ -520,9 +511,9 @@ export default function Home() {
           ref={(el) => (sectionRefs.current[0] = el)}
           className="text-center px-4 sm:px-8 md:px-12 lg:px-16"
         >
-          <h1 className="text-[44px] sm:text-[52px] md:text-[60px] max-w-3xl mx-auto font-[family-name:var(--font-sf)] leading-tight font-medium mb-4">
-            <span className="inline-block">Lorem ipsum<span className="relative"> dolor sit
-              <svg ref={svgRef} className="absolute left-0 right-0 bottom-0 translate-y-[100%]" width="246" height="19" viewBox="0 0 246 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <h1 className="text-[36px] sm:text-[52px] md:text-[60px] max-w-3xl mx-auto font-[family-name:var(--font-sf)] leading-tight font-medium mb-4">
+            <span className="inline-block text-nowrap">Lorem ipsum<span className="relative"> dolor sit
+              <svg ref={svgRef} className="absolute left-auto max-w-[120px] right-0 bottom-0 translate-y-[100%] sm:left-0 sm:max-w-none" width="246" height="19" viewBox="0 0 246 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.6" d="M1.8746 7.64974C20.9567 5.43159 136.188 0.700663 183.705 1.44049C197.365 1.65318 211.027 1.88974 224.691 2.22078C229.044 2.32625 237.023 1.74519 242.574 3.3093C244.786 3.93251 244.438 4.90261 242.461 5.34581C234.093 7.22227 224.399 6.73916 215.726 7.35093C196.726 8.691 177.925 10.9769 158.886 12.1051C150.392 12.6084 142.061 13.7289 133.589 14.2664C122.926 14.9429 131.334 14.8281 137.26 14.7078C159.88 14.2487 181.627 14.7029 204.205 17.1549" stroke="url(#paint0_linear_13001_12505)" stroke-width="2" stroke-linecap="round"/>
                 <defs>
                 <linearGradient id="paint0_linear_13001_12505" x1="-9.05512" y1="-19.6465" x2="212.015" y2="115.583" gradientUnits="userSpaceOnUse">
@@ -533,9 +524,9 @@ export default function Home() {
                 </defs>
               </svg>
               </span></span>
-            <span className="inline-block"> in tempor</span>
+            <span className="inline-block text-nowrap"> in tempor</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl mb-6 max-w-3xl mx-auto text-[#CFD3D8]">
+          <p className="text-base sm:text-lg md:text-xl mb-6 max-w-3xl mx-auto text-[#CFD3D8] text-balance">
             Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod
           </p>
 
@@ -711,7 +702,7 @@ export default function Home() {
 
         <section
           ref={(el) => (sectionRefs.current[3] = el)}
-          className="marquee-container mt-12 max-w-[72rem] mx-auto overflow-hidden py-4"
+          className="marquee-container mt-12 pb-6 max-w-[72rem] mx-auto overflow-hidden"
         >
           <div className="marquee-items flex space-x-12">
             <div className="marquee-item flex justify-center items-center">
