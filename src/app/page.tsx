@@ -204,7 +204,7 @@ export default function Home() {
         src="/gradient-img.svg"
         alt="bg"
         fill={true}
-        className="w-full h-[200vh] absolute -z-10 object-cover backdrop-blur-lg"
+        className="w-full h-[200vh] absolute -z-10 object-cover"
       />
 
       <nav
