@@ -199,7 +199,7 @@ export default function Home() {
       id="page-wrapper"
       className="font-[family-name:var(--font-ibm)] w-screen overflow-hidden "
     >
-      <svg  className="w-full h-screen absolute -z-10 object-cover backdrop-blur-lg transform -translate-y-1/2" width="100%" height="100%" viewBox="0 0 2576 641" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* <svg  className="w-full h-[200vh] absolute -z-10 object-cover backdrop-blur-lg transform -translate-y-1/2" width="100%" height="100%" viewBox="0 0 2576 641" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.6">
       <g filter="url(#filter0_f_15001_294)">
       <ellipse cx="640.643" cy="132.027" rx="640.643" ry="132.027" transform="matrix(0.999886 0.0151245 0.996324 -0.0856594 376.393 313.618)" fill="#00F0FF"/>
@@ -260,7 +260,14 @@ export default function Home() {
       <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_15001_294"/>
       </filter>
       </defs>
-      </svg>
+      </svg> */}
+
+      <Image
+        src="/gradient-img.svg"
+        alt="bg"
+        fill={true}
+        className="w-full h-[200vh] absolute -z-10 object-cover backdrop-blur-lg"
+      />
 
       <nav
         ref={navRef}
@@ -422,8 +429,8 @@ export default function Home() {
 
       <main className="max-w-[72rem] mx-auto flex flex-col px-2 sm:px-8 overflow-hidden"> 
         <div className="pt-14 pb-18 sm:pt-18 sm:pb-22 relative">
-        <div className="bg-gradient-to-r from-[transparent] via-[#transparent] to-[#363636] h-[1px] width-[100vw] transform translate-x-[30vw] absolute bottom-0 left-0 right-0"></div>
-        <div className="bg-gradient-to-r to-[transparent] via-[#363636] from-[#363636] h-[1px] width-[100vw] transform translate-x-[-30vw] absolute bottom-0 left-0 right-0"></div>
+        <div className="bg-gradient-to-r from-[transparent] via-[transparent] to-[#363636] h-[1px] width-[100vw] transform translate-x-[30vw] absolute bottom-0 left-0 right-0"></div>
+        <div className="bg-gradient-to-r to-[transparent] via-[#363636] from-[transparent] h-[1px] width-[100vw] transform  absolute bottom-0 left-0 right-0"></div>
 
           <svg width="100%" className="absolute top-0 left-0 right-0" viewBox="0 0 1152 254" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.6">

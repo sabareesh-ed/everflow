@@ -50,7 +50,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: "Everflow",
-  description: "Assignment from ToolJet",
+  description: "Made with Next.js and Tailwind CSS",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
