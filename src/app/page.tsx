@@ -673,7 +673,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-1.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -684,7 +684,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-2.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={500}
                 loading="eager"
@@ -695,7 +695,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-3.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -706,7 +706,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-4.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -721,7 +721,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-5.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -732,7 +732,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-6.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -743,7 +743,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-7.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -754,7 +754,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-8.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -768,7 +768,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-9.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -779,7 +779,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-10.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -790,7 +790,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-11.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -801,7 +801,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-12.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -812,7 +812,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-13.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -823,7 +823,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-14.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -834,7 +834,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-15.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -845,7 +845,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-16.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 
@@ -853,12 +853,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="marquee-items flex space-x-12">
+           <div className="marquee-items flex space-x-12">
             <div className="marquee-item flex justify-center items-center">
               <Image
                 className="w-auto"
                 src="/companylogo-1.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -869,7 +869,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-2.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={500}
                 loading="eager"
@@ -880,7 +880,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-3.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -891,7 +891,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-4.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -906,7 +906,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-5.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -917,7 +917,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-6.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -928,7 +928,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-7.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -939,7 +939,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-8.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -953,7 +953,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-9.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -964,7 +964,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-10.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -975,7 +975,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-11.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -986,7 +986,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-12.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -997,7 +997,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-13.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -1008,7 +1008,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-14.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -1019,7 +1019,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-15.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 loading="eager"
@@ -1030,7 +1030,7 @@ export default function Home() {
               <Image
                 className="w-auto"
                 src="/companylogo-16.png"
-                alt="Logo 1"
+                alt="company-logo"
                 width={203}
                 height={50}
                 
